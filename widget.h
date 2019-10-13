@@ -29,6 +29,9 @@ protected:
     void keyPressEvent(QKeyEvent *e);
     void mouseReleaseEvent(QMouseEvent *e);
 
+signals:
+    void changeMousePosition(int x, int y);
+
 private:
     Ui::Widget *ui;
     QImage image;

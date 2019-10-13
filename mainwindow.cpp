@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFileDialog>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,6 +11,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     myWidget = new Widget(this);
     setCentralWidget(myWidget);
+    coord  = new QLabel("test",this);
+    ui->statusbar->addPermanentWidget(coord);
+    //connect(myWidget,SIGNAL(changeMousePosition(int, int)),this);
+
 }
 
 MainWindow::~MainWindow()
@@ -34,7 +39,8 @@ void MainWindow::on_actionRectl_triggered()
 
 void MainWindow::on_actionLoad_triggered()
 {
-    myWidget->load(QFileDialog().getOpenFileName());
+    myWidget->load(QFileDialog().getOpenFileName(this,"Open file"));
+    ui->statusbar->showMessage("File loaded",5000 );
 }
 
 void MainWindow::on_actionSave_triggered()

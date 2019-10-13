@@ -50,6 +50,8 @@ void Widget::paintEvent(QPaintEvent *e)
 }
 
 void Widget::mouseMoveEvent(QMouseEvent *e){
+
+    emit changeMousePosition(e->x(),e->y());
     if(mode == 'r'){
         QPainter p(&tempImage);
         p.drawLine(x0,y0,e->x(),e->y());

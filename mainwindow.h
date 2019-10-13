@@ -4,6 +4,7 @@
 #include "widget.h"
 
 #include <QMainWindow>
+#include <QLabel>
 
 namespace Ui {
 class MainWindow;
@@ -30,9 +31,13 @@ private slots:
 
     void on_actionNew_triggered();
 
+public slots:
+    void mousePos(int x, int y);
+
 private:
     Ui::MainWindow *ui;
     Widget *myWidget;
+    QLabel *coord;
 };
 
 #endif // MAINWINDOW_H
