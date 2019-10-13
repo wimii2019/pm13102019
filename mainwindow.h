@@ -24,6 +24,12 @@ private slots:
 
     void on_actionRectl_triggered();
 
+    void on_actionLoad_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionNew_triggered();
+
 private:
     Ui::MainWindow *ui;
     Widget *myWidget;

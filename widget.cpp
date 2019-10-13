@@ -23,6 +23,25 @@ Widget::~Widget()
     delete ui;
 }
 
+void Widget::newPicture()
+{
+    image.fill(Qt::white);
+    tempImage = image;
+    repaint();
+}
+
+void Widget::load(QString fileName)
+{
+    image.load(fileName);
+    tempImage = image;
+    repaint();
+}
+
+void Widget::save(QString fileName)
+{
+    image.save(fileName);
+}
+
 void Widget::paintEvent(QPaintEvent *e)
 {
     QPainter p(this);

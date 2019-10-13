@@ -17,6 +17,10 @@ public:
     ~Widget();
     char mode;
 
+    void newPicture();
+    void load(QString fileName);
+    void save(QString fileName);
+
 
 protected:
     void paintEvent(QPaintEvent *e);
