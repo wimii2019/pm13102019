@@ -15,8 +15,8 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
+    char mode;
 
-    void draw();
 
 protected:
     void paintEvent(QPaintEvent *e);
@@ -31,7 +31,7 @@ private:
     QImage tempImage;
     int x0;
     int y0;
-    char mode;
+
 };;
 
 #endif // WIDGET_H
