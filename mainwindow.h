@@ -5,6 +5,7 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QToolButton>
 
 namespace Ui {
 class MainWindow;
@@ -38,6 +39,8 @@ private:
     Ui::MainWindow *ui;
     Widget *myWidget;
     QLabel *coord;
+    QToolBar *toolBar;
+    QToolButton *colorButton;
 };
 
 #endif // MAINWINDOW_H

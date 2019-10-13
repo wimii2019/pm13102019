@@ -16,6 +16,7 @@ public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
     char mode;
+    QColor color;
 
     void newPicture();
     void load(QString fileName);

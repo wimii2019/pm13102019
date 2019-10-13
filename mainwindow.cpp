@@ -13,7 +13,11 @@ MainWindow::MainWindow(QWidget *parent) :
     setCentralWidget(myWidget);
     coord  = new QLabel("test",this);
     ui->statusbar->addPermanentWidget(coord);
-    //connect(myWidget,SIGNAL(changeMousePosition(int, int)),this);
+    connect(myWidget,SIGNAL(changeMousePosition(int, int)),this,SLOT(mousePos()));
+
+    colorButton = new QToolButton(this);
+    ui->toolBar->addWidget(colorButton);
+    //connect(clicked(),)
 
 }
 
@@ -51,4 +55,9 @@ void MainWindow::on_actionSave_triggered()
 void MainWindow::on_actionNew_triggered()
 {
     myWidget->newPicture();
+}
+
+void MainWindow::mousePos(int x, int y)
+{
+        coord->setText(QString(x)+" " +QString(y));
 }
