@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>computer.png</file>
+        <file>download.png</file>
+        <file>Load-File-512.png</file>
+    </qresource>
+</RCC>
